@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Sandisk Ultra 128GB SDXC UHS=I Memory Card up to 80MB/s",
+    "price": "45.89",
+    "description": "Ultra fast cards (2) to take better pictures and Full HD Videos",
+    "ratings": 4.5,
+    "category": "Electronics",
+    "seller": "Amazon",
+    "stock": 122,
+    "numOfReviews": 120,
+    "reviews": []
+  },
+  {
+    "name": "HP Pavillion",
+    "price": "30000",
+    "description": "Very Good Laptop with SSD and Intel-i5 processor",
+    "ratings": 4.7,
+    "category": "Laptops",
+    "seller": "Amazon",
+    "stock": 50,
+    "numOfReviews": 400,
+    "reviews": []
+  }
+]
