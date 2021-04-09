@@ -1,0 +1,28 @@
+[
+  {
+    "shippingInfo": {
+      "address": "New Upper Chelidanga ShibMandir",
+      "city": "Asansol",
+      "phoneNo": "8509061574",
+      "postalCode": "713304",
+      "country": "India"
+    },
+    "orderItems": [
+      {
+        "name": "Sandisk Ultra 128GB SDXC UHS=I Memory Card up to 80MB/s",
+        "quantity": 2,
+        "image": "http://localhost:8000/images/",
+        "price": 91.78,
+        "product": "606d80b079449e565c6c3edf"
+      }
+    ],
+    "paymentInfo": {
+      "id": "100abc12",
+      "status": "succeeded"
+    },
+    "itemsPrice": 91.78,
+    "taxPrice": 20.0,
+    "shippingPrice": 25.0,
+    "totalPrice": 136.78
+  }
+]
