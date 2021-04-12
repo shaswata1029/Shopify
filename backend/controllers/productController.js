@@ -39,7 +39,7 @@ module.exports.getSingleProduct = catchAsyncErrors(async (req, res, next) => {
   const product = await Product.findById(req.params.id);
 
   if (!product) {
-    return next(new ErrorHandler("Product not found", 404));
+    return next(new ErrorHandler("Product not found withthis id", 404));
   }
 
   res.status(200).json({ success: true, product });
