@@ -16,8 +16,8 @@ module.exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 
 // Get all products from database according to various queries
 module.exports.getProducts = catchAsyncErrors(async (req, res, next) => {
-  const resPerPage = 1;
-  const productCount = await Product.countDocuments();
+  const resPerPage = 2;
+  const productsCount = await Product.countDocuments();
   const apiFeatures = new APIFeatures(Product.find(), req.query)
     .search()
     .filter()
@@ -27,8 +27,7 @@ module.exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
   res.status(200).json({
     success: true,
-    count: products.length,
-    productCount,
+    productsCount,
     products,
   });
 });
