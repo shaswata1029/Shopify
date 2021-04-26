@@ -2,6 +2,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
+import ProductDetails from "./components/product/ProductDetails";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <div className="container container-fluid">
           <Switch>
             <Route path="/" component={Home} exact />
+            <Route path="/product/:id" component={ProductDetails} exact />
           </Switch>
         </div>
         <Footer />
