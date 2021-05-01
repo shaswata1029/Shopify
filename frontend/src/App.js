@@ -2,8 +2,9 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-
 import ProductDetails from "./components/product/ProductDetails";
+import Login from "./components/auth/Login";
+
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" component={Home} exact />
             <Route path="/product/:id" component={ProductDetails} exact />
             <Route path="/search/:keyword" component={Home} exact />
+            <Route path="/login" component={Login} exact />
           </Switch>
         </div>
         <Footer />
