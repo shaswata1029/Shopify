@@ -10,6 +10,8 @@ const sendToken = (user, statusCode, res) => {
       Date.now() + Number(process.env.COOKIE_EXPIRES_TIME) * 24 * 60 * 60 * 1000
     ),
     httpOnly: true,
+    // sameSite: "None",
+    // secure: true,
   };
 
   res

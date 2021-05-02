@@ -39,7 +39,7 @@ function Login({ history }) {
         <Loader />
       ) : (
         <>
-          <Metadata title={Login} />
+          <Metadata title="Login" />
           <div className="row wrapper">
             <div className="col-10 col-lg-5">
               <form className="shadow-lg" onSubmit={submitHandler}>

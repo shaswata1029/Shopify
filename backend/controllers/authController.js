@@ -1,3 +1,4 @@
+const cloudinary = require("cloudinary");
 const User = require("../models/user");
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
@@ -8,6 +9,12 @@ const sendEmail = require("../utils/sendEmail");
 // Register a new user
 
 module.exports.registerUser = catchAsyncErrors(async (req, res, next) => {
+  const options = {
+    folder: "avavtars",
+    width: 150,
+    crop: "scale",
+  };
+  const result = await cloudinary.v2.uploader.upload(req.body.avatar, options);
   const { name, email, password } = req.body;
 
   const user = await User.create({
@@ -15,8 +22,8 @@ module.exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     email,
     password,
     avatar: {
-      public_id: "1",
-      url: "http://localhost:8000",
+      public_id: result.public_id,
+      url: result.secure_url,
     },
   });
 
